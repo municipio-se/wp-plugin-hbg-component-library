@@ -1,5 +1,5 @@
 {
-    "name": "helsingborg-stad/component-library",
+    "name": "municipio-lts/wp-plugin-hbg-component-library-2024",
     "type": "wordpress-muplugin",
     "description": "A library of components for use in WordPress",
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Eric Rosenborg",
             "email": "eric.rosenborg@hiq.se"
+        },
+        {
+            "name": "Whitespace",
+            "email": "code@whitespace.se"
         }
     ],
     "scripts": {
@@ -26,5 +30,8 @@
             "ComponentLibrary\\": "source/php/"
         }
     },
-    "version": "4.11.6"
+    "version": "4.11.6",
+    "extra": {
+        "installer-name": "component-library"
+    }
 }
