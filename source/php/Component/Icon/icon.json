@@ -8,7 +8,7 @@
         "customColor": "",
         "componentElement": "span",
         "filled": true,
-        "decorative": false
+        "decorative": true
     },
     "description": {
         "size": "Sizes: xs, sm, md, lg, xl, xxl",
