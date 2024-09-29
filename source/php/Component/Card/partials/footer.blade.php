@@ -11,7 +11,8 @@
             'compress' => 4, 
             'tags' => $tags, 
             'format' => false,
-            'classList' => ($buttons) ? ['u-margin__top--2'] : []
+            'classList' => ($buttons) ? ['u-margin__top--2'] : [],
+            'context' => ['card']
             ])
         @endtags
     @endif
