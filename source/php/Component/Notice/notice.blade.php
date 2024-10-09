@@ -1,5 +1,5 @@
 <!-- notice.blade.php -->
-<div class="{{ $class }}" {!! $attribute !!} aria-labelledby="notice__text__{{ $id }}">
+<div class="{{ $class }}" {!! $attribute !!}>
     
     <!-- notice__ico -->
     @if($icon)
