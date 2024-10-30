@@ -1,7 +1,7 @@
 {
     "slug": "slider",
     "default": {
-        "showStepper": true,
+        "showStepper": false,
         "autoSlide": true,
         "peekSlides": false,
         "navigationHover": true,
