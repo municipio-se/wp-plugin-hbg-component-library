@@ -54,7 +54,7 @@ class Slider__item extends \ComponentLibrary\Component\BaseController
         //Recognize as an image
         if(!$background_video) {
             $this->data['attributeList']['aria-label'] = $alt ? $alt : '';
-            $this->data['attributeList']['aria-labeledby'] = $this->getUid() . '__heading';
+            $this->data['attributeList']['aria-labelledby'] = $this->getUid() . '__heading';
         }
         
         if(!empty($focusPoint)) {
