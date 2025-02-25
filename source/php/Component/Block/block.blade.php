@@ -35,7 +35,8 @@
                         'tags' => $meta,
                         'beforeLabel' => '',
                         'format' => false,
-                        'classList' => [$baseClass . '__meta']
+                        'classList' => [$baseClass . '__meta'],
+                        'context' => ['block', 'block.meta']
                     ])
                     @endtags
                 @endif
@@ -50,7 +51,8 @@
                         'tags' => $secondaryMeta,
                         'beforeLabel' => '',
                         'format' => false,
-                        'classList' => [$baseClass . '__secondarymeta']
+                        'classList' => [$baseClass . '__secondarymeta'],
+                        'context' => ['block', 'block.secondaryMeta']
                     ])
                     @endtags
                 @endif

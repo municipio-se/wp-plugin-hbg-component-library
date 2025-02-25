@@ -1,4 +1,4 @@
-<!-- block.blade.php -->
+<!-- box.blade.php -->
 <{{ $componentElement }} class="{{ $class }}" {!! $attribute !!}>
 
     @if (!empty($date) && !empty($dateBadge))
@@ -28,6 +28,7 @@
                     'beforeLabel' => '',
                     'format' => false,
                     'classList' => [$baseClass . '__tags']
+                    'context' => ['box', 'date']
                 ])
                 @endtags
             @endif
