@@ -27,7 +27,7 @@
                     'tags' => [['label' => $date]],
                     'beforeLabel' => '',
                     'format' => false,
-                    'classList' => [$baseClass . '__tags']
+                    'classList' => [$baseClass . '__tags'],
                     'context' => ['box', 'date']
                 ])
                 @endtags
