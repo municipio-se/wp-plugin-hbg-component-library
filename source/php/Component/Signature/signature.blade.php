@@ -39,19 +39,21 @@
     @endif
 
     
-    @if($published)
+    @if($published || $updated)
         <div class="{{$baseClass}}__dates {{$author ? $baseClass.'__dates--aligned' : ''}}">
 
-            @typography([
-                "element" => "span",
-                "variant" => "byline",
-                "classList" => [
-                    $baseClass.'__published'
-                ]
-            ])
-                {{$label->publish}}: @date(['action' => false,'timestamp' => $published])@enddate
-            @endtypography
-            
+            @if ($published)
+                @typography([
+                    "element" => "span",
+                    "variant" => "byline",
+                    "classList" => [
+                        $baseClass.'__published'
+                    ]
+                ])
+                    {{$label->publish}}: @date(['action' => false,'timestamp' => $published])@enddate
+                @endtypography
+            @endif
+
             @if ($updated)
                 @typography([
                     "element" => "span",
