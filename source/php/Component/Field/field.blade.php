@@ -21,7 +21,6 @@
         
         {{-- Multiline (textarea) --}}
         @if($multiline)
-
             {{-- Do not break into multiple lines, will add space to value. --}}
             <textarea id="input_{{ $id }}" {!! $fieldAttribute !!}>{{ $value }}</textarea>
             <div class="{{ $baseClass }}_focus-styler u-level-top"></div> 
@@ -90,5 +89,15 @@
         <small class="{{$baseClass}}__helper">
             {{$helperText}}
         </small>
+    @endif
+
+    @if (isset($datalist))
+        <datalist id="{{ $fieldAttributeList['list'] }}"
+            data-linked-fields="{{ json_encode(array_keys($datalist['linkedFields'] ?? [])) }}">
+            @foreach ($datalist['options'] as $option)
+                <option value="{{ $option['value'] }}" data-id="{{ $option['id'] }}"
+                    data-linked-fields="{{ json_encode($option['linkedFields']) }}"></option>
+            @endforeach
+        </datalist>
     @endif
 </div>

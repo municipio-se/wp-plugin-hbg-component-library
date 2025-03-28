@@ -246,6 +246,11 @@ class Field extends \ComponentLibrary\Component\Form\Form
             }
         }
 
+        if(isset($this->data['datalist'])) {
+            $datalist_id = $this->data['datalist']['id'] ?? ($this->data['id'] . '-datalist');
+            $this->data['fieldAttributeList']['list'] = $datalist_id;
+        }
+
         //Create field attributes
         $this->data['fieldAttribute'] = self::buildAttributes(
             $this->data['fieldAttributeList']
