@@ -247,8 +247,8 @@ class Field extends \ComponentLibrary\Component\Form\Form
         }
 
         if(isset($this->data['datalist'])) {
-            $datalist_id = $this->data['datalist']['id'] ?? ($this->data['id'] . '-datalist');
-            $this->data['fieldAttributeList']['list'] = $datalist_id;
+            $this->data['datalist']['id'] ??= $this->data['id'] . '-datalist';
+            $this->data['fieldAttributeList']['list'] = $this->data['datalist']['id'];
         }
 
         //Create field attributes
