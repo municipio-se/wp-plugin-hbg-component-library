@@ -10,7 +10,7 @@
     ])
     <iframe id="{{ $id }}" class="{{$class}}" {!! $attribute !!}>
     </iframe>
-    <script>
+    <script{!! wp_sanitize_script_attributes(apply_filters('wp_inline_script_attributes', [])) !!}>
         window.addEventListener(
             'message',
             function(e) {
