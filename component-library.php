@@ -29,8 +29,30 @@ if(function_exists('plugin_dir_path') && function_exists('plugin_url')) {
 
 define('COMPONENTLIBRARY_TEMPLATE_PATH', COMPONENTLIBRARY_PATH . 'templates/');
 
-if(function_exists('plugin_basename')) {
-    load_plugin_textdomain('component-library', false, plugin_basename(dirname(__FILE__)) . '/languages');
+
+if(function_exists('add_action')) {
+    define(
+        "COMPONENTLIBRARY_LANGUAGES_PATH",
+        plugin_basename(dirname(__FILE__)) . "/languages",
+    );
+    define(
+        "COMPONENTLIBRARY_IS_MU",
+        strpos(COMPONENTLIBRARY_PATH, WPMU_PLUGIN_DIR) === 0,
+    );
+    add_action("init", function () {
+        if (COMPONENTLIBRARY_IS_MU) {
+            load_muplugin_textdomain(
+                "component-library",
+                COMPONENTLIBRARY_LANGUAGES_PATH,
+            );
+        } else {
+            load_plugin_textdomain(
+                "component-library",
+                false,
+                COMPONENTLIBRARY_LANGUAGES_PATH,
+            );
+        }
+    });
 }
 
 require_once COMPONENTLIBRARY_PATH . 'load.php';
