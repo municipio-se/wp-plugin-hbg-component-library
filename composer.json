@@ -1,5 +1,5 @@
 {
-    "name": "municipio-lts/wp-plugin-hbg-component-library-2024",
+    "name": "municipio/wp-plugin-hbg-component-library",
     "type": "wordpress-muplugin",
     "description": "A library of components for use in WordPress",
     "license": "MIT",
