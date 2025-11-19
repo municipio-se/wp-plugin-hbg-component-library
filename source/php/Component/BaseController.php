@@ -3,6 +3,8 @@
 namespace ComponentLibrary\Component;
 
 use ComponentLibrary\Cache\CacheInterface;
+use ComponentLibrary\Helper\TagSanitizerInterface;
+use ComponentLibrary\Helper\TagSanitizer;
 
 class BaseController
 {
@@ -31,10 +33,17 @@ class BaseController
     /**
      * Run init
      */
-    public function __construct($data, protected CacheInterface $cache)
+    public function __construct($data, protected CacheInterface $cache, protected ?TagSanitizerInterface $tagSanitizer = null)
     {
+        // Create default TagSanitizer if not provided
+        if ($this->tagSanitizer === null) {
+            $this->tagSanitizer = new TagSanitizer();
+        }
+
         //Load input data
         if (!is_null($data) && is_array($data)) {
+            // Sanitize input data to prevent XSS
+            $data = $this->tagSanitizer->sanitizeArray($data);
             $this->data = array_merge($this->data, $data);
         }
 
