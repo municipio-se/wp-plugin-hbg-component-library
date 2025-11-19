@@ -4,7 +4,7 @@
     'classList' => [$baseClass . '__link'],
     'href' => $item['href'],
     'xfn' => $item['xfn'] ?? false,
-    'target' => $item['target'] ? $item['target'] : '_top',
+    'target' => $item['target'] ?? '_top',
   ])
     @icon([
       'icon' => $item['icon']['icon'] ?? null,
