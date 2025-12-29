@@ -30,7 +30,6 @@
             "ComponentLibrary\\": "source/php/"
         }
     },
-    "version": "4.11.6",
     "extra": {
         "installer-name": "component-library"
     }
