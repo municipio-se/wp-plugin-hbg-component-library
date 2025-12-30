@@ -1,6 +1,6 @@
-# Helsingborg’s Component Library
+# HBG Component Library
 
-This plugin is an LTS version of Helsingborg stad’s [Compontent Library plugin v4.11.6](https://github.com/helsingborg-stad/component-library/tree/4.11.6).
+This plugin is a [Municipio LTS](https://github.com/municipio-se/municipio-lts) version of Helsingborg stad’s [Component Library plugin v4.11.6](https://github.com/helsingborg-stad/component-library/tree/4.11.6).
 
 ## Changes in this Fork
 
