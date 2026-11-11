@@ -26,12 +26,14 @@
         "tags": false,
         "icon": false,
         "link": false,
+        "linkTarget": "_top",
         "hasPlaceholder": false,
         "lang": {
             "visit": "Visit"
         }
     },
     "description": {
+        "linkTarget": "Target for heading and image links. Inherited from the button when a single button supplies the link.",
         "layout": "Which layout to use",
         "title": "The title of the segment",
         "content": "The content of the segment",

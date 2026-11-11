@@ -7,6 +7,7 @@
         'u-margin__bottom--1'
     ],
     'href' => $item['href'],
+    'target' => $item['target'] ?? '_top',
     'xfn' => $item['xfn'],
   ])
     @icon($item['icon'])@endicon
